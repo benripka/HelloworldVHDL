@@ -4,10 +4,13 @@ entity hello_world is
 
 end hello_world;
 
-architecture behavior of hello_world is
+architecture behaviour of hello_world is
     begin 
         process
             variable l : line;
         begin
-            write(1, String("Hello world!"));
-            writeline(output, 1);
+            write(l, String'("Hello world!"));
+            writeline(output, l);
+            wait;
+        end process;
+    end behaviour;
